@@ -42,6 +42,7 @@ color: #562EFF;
 .topplayer{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .topplayer img{
     height: 56px;
@@ -96,7 +97,7 @@ color: #562EFF;
 .course-info{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .fa-star{
     font-size: 12px;
@@ -108,4 +109,36 @@ color: #562EFF;
 .fa-star.empty{
     color: 
     #AEAEAE;
+}
+
+/* Media Queries 
+------------------ */
+
+/* topo players  */
+@media only screen and (max-width:688px) {
+    .container{
+        width: 100%;
+    }
+    .top-players, .blogs,.courses{
+        grid-template-columns: repeat(1,1fr);
+        
+    }
+    .topplayer,.blog{
+        flex-direction: column;
+    }
+
+    
+}
+
+/* ipad device */
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }  
+    .top-players ,.courses{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .blogs{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
